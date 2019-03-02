@@ -157,9 +157,6 @@ func encodeBlockList(in reflect.Value) (ast.Node, []*ast.ObjectKey, error) {
 		if child == nil {
 			continue
 		}
-		if childKey == nil {
-			return encodePrimitiveList(in)
-		}
 
 		item := &ast.ObjectItem{Val: child}
 		item.Keys = childKey
