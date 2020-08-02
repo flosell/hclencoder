@@ -1,4 +1,6 @@
-# hclencoder<br>[![Build Status](https://travis-ci.org/rodaine/hclencoder.svg?branch=master)](https://travis-ci.org/rodaine/hclencoder) [![GoDoc](https://godoc.org/github.com/rodaine/hclencoder?status.svg)](https://godoc.org/github.com/rodaine/hclencoder)
+# hclencoder - fork for iam-policy-json-to-terraform<br>[![Build Status](https://travis-ci.org/rodaine/hclencoder.svg?branch=master)](https://travis-ci.org/rodaine/hclencoder) [![GoDoc](https://godoc.org/github.com/rodaine/hclencoder?status.svg)](https://godoc.org/github.com/rodaine/hclencoder)
+
+**Note:** This is a fork of `hclencoder` for use in [`iam-policy-json-to-terraform`](https://github.com/flosell/iam-policy-json-to-terraform); Specifically, it rolls back some of the behaviour (`b2820d827e5ece4fff2f4bc6490359cadafd13df`) that `hclencoder` introduced that's not helpful in `iam-policy-json-to-terraform`. Do not depend on this fork for any other applications as it's not actively maintained beyond what's useful for the specific use case and might change without notice. Since this is in some ways a dirty hack, I'll be working to resolve these issues in upstream and then continue to track that one. 
 
 `hclencoder` encodes/marshals/converts Go types into [HCL (Hashicorp Configuration Language)][HCL]. `hclencoder` ensures correctness in the generated HCL, and can be useful for creating programmatic, type-safe config files.
 
